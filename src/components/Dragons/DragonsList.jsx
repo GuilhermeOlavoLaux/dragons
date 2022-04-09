@@ -2,6 +2,7 @@ import { Fragment, useEffect, useState } from "react";
 import BackgroundImage from "../ScreenBody/BackgroundImage";
 import Header from "../ScreenBody/Header"
 import axios from "axios";
+import DragonCard from "./DragonCard";
 
 export default function DragonsList() {
     const [dragonsList, setDragonsList] = useState([])
@@ -20,7 +21,9 @@ export default function DragonsList() {
     function renderDragonsList() {
         const dragonsCards = dragonsList.map((dragon) => {
             return (
-                <h1>{dragon.name}</h1>
+                <>
+                    <DragonCard dragonName={dragon.name}></DragonCard>
+                </>
             )
         })
 
@@ -36,7 +39,11 @@ export default function DragonsList() {
             <BackgroundImage></BackgroundImage>
             <Header></Header>
 
-            {renderDragonsList()}
+
+            <div className="dragons-list-container">
+
+                {renderDragonsList()}
+            </div>
 
 
 

@@ -162,29 +162,29 @@
   padding: 0.4rem;
   border-radius: 0.6rem;
   border: 1px solid transparent;
-  color: #ffffff;
-  background-color: #1dc9a0;
+  color: #162632;
+  background-color: #bbffbb;
   letter-spacing: 1px;
   -webkit-transition: all 0.15s linear;
   transition: all 0.15s linear;
   width: 100%;
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
 .login .login-container .login-form button:hover {
   background-color: rgba(29, 201, 160, 0.08);
-  border-color: #1dc9a0;
-  color: #1dc9a0;
+  border-color: #bbffbb;
+  color: #bbffbb;
   -webkit-transform: translateY(-5px) scale(1.05);
           transform: translateY(-5px) scale(1.05);
-  margin-top: 2rem;
+  margin-top: 3rem;
   cursor: pointer;
 }
 
 .login .login-container .login-form button:active {
   background-color: transparent;
-  border-color: #1dc9a0;
-  color: #1dc9a0;
+  border-color: #bbffbb;
+  color: #bbffbb;
   -webkit-transform: translateY(5px) scale(0.95);
           transform: translateY(5px) scale(0.95);
 }
@@ -204,5 +204,14 @@
   width: 100vw;
   z-index: -1;
   position: absolute;
+}
+
+.dragon-card {
+  background-color: #bbffbb;
+  border: 2px solid green;
+  border-radius: 0.6rem;
+  color: #162632;
+  padding: 1rem;
+  margin: 2rem 5rem;
 }
 /*# sourceMappingURL=index.css.map */
