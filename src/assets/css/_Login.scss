@@ -26,9 +26,9 @@
 
     .flying-dragon {
       position: absolute;
-      bottom: 23rem;
-      width: 20rem;
-      left: 42rem;
+      bottom: 27rem;
+      width: 19rem;
+      left: 43rem;
     }
     .login-info {
       display: flex;
@@ -92,6 +92,7 @@
         color: #1dc9a0;
         transform: translateY(-5px) scale(1.05);
         margin-top: 2rem;
+        cursor: pointer;
       }
 
       button:active {

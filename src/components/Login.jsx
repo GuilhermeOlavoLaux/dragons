@@ -1,7 +1,22 @@
-import { Fragment } from "react";
-import Header from "./ScreenBody/Header";
+import { Fragment, useContext, useState } from "react";
+import { AuthContext } from "./Context/AuthContext";
 
 export default function Login() {
+
+    const [userName, setUserName] = useState('')
+
+    const [password, setPassword] = useState('')
+
+    const { authenticated, setAuthenticated } = useContext(AuthContext)
+
+
+    function validateUser() {
+
+        if (userName === "Teste" && password === "123") {
+            setAuthenticated(true)
+        }
+    }
+
 
     return (
         <Fragment>
@@ -29,18 +44,26 @@ export default function Login() {
                     <div className="login-form">
                         <h1>Login</h1>
 
-
                         <p>Nome:</p>
 
-                        <input type="text" />
-
+                        <input type="text"
+                            onChange={(e) => {
+                                setUserName(e.target.value)
+                            }}
+                        />
 
                         <p>Senha:</p>
 
-                        <input type="password" />
+                        <input type="password"
+                            onChange={(e) => {
+                                setPassword(e.target.value)
+                            }}
+                        />
 
 
-                        <button>Entrar</button>
+                        <button
+                            onClick={() => validateUser()}
+                        >Entrar</button>
 
                     </div>
                 </div>
