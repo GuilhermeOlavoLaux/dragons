@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
-import Login from "../components/Login";
-import Login2 from "../components/Login2";
+import Login from "../components/Login/Login";
 import ProtectedRoutes from "./ProtectedRoutes";
+import DragonsList from "../components/Dragons/DragonsList"
 
 export default function AppRoutes() {
 
@@ -10,7 +10,7 @@ export default function AppRoutes() {
             <Route exact path='/' element={<Login />} />
 
             <Route element={<ProtectedRoutes />}>
-                <Route exact path='/cadastro' element={<Login2 />} />
+                <Route exact path='/dragons' element={<DragonsList />} />
             </Route>
         </Routes>
     )

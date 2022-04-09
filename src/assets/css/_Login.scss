@@ -1,13 +1,3 @@
-.background-container {
-  position: relative;
-
-  .background-image {
-    height: 100vh;
-    width: 100vw;
-    z-index: -1;
-    position: absolute;
-  }
-}
 .login {
   display: flex;
   align-items: center;

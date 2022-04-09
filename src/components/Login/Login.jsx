@@ -1,32 +1,27 @@
 import { Fragment, useContext, useState } from "react";
-import { AuthContext } from "./Context/AuthContext";
+import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../Context/AuthContext";
+import BackgroundImage from "../ScreenBody/BackgroundImage"
 
 export default function Login() {
-
     const [userName, setUserName] = useState('')
-
     const [password, setPassword] = useState('')
 
-    const { authenticated, setAuthenticated } = useContext(AuthContext)
+    const { setAuthenticated } = useContext(AuthContext)
 
+    const navigate = useNavigate()
 
     function validateUser() {
-
         if (userName === "Teste" && password === "123") {
             setAuthenticated(true)
         }
+        navigate('/dragons')
     }
-
 
     return (
         <Fragment>
 
-            <div className="background-container">
-                <img src="https://media.discordapp.net/attachments/957014892500635669/962160334389518346/skye-background.png"
-                    alt=""
-                    className="background-image"
-                />
-            </div>
+            <BackgroundImage />
 
 
             <div className="login">
@@ -37,7 +32,7 @@ export default function Login() {
                         src="https://media.discordapp.net/attachments/957014892500635669/962165788888924200/red-dragon-8bit.png"
                         alt="" />
                     <div className="login-info">
-                        <img src="https://media.discordapp.net/attachments/957014892500635669/962167908212047882/warior-8bit.png?width=618&height=676" alt="" />
+                        <img src="https://media.discordapp.net/attachments/957014892500635669/962193228629684305/warior-8bit.png?width=432&height=473" alt="" />
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, esse? Eligendi reprehenderit magni cupiditate sed quasi qui aut sit, nam doloribus omnis veniam amet accusamus sequi excepturi repudiandae iusto quidem?</p>
                     </div>
 
@@ -62,7 +57,10 @@ export default function Login() {
 
 
                         <button
-                            onClick={() => validateUser()}
+                            onClick={() => {
+                                validateUser();
+
+                            }}
                         >Entrar</button>
 
                     </div>
