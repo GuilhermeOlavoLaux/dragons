@@ -22,7 +22,7 @@ export default function Login() {
                         src="https://media.discordapp.net/attachments/957014892500635669/962165788888924200/red-dragon-8bit.png"
                         alt="" />
                     <div className="login-info">
-                        <img src="https://media.discordapp.net/attachments/957014892500635669/962139976538140722/red-dragon.jpg" alt="" />
+                        <img src="https://media.discordapp.net/attachments/957014892500635669/962167908212047882/warior-8bit.png?width=618&height=676" alt="" />
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, esse? Eligendi reprehenderit magni cupiditate sed quasi qui aut sit, nam doloribus omnis veniam amet accusamus sequi excepturi repudiandae iusto quidem?</p>
                     </div>
 

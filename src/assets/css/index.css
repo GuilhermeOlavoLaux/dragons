@@ -45,9 +45,9 @@
 
 .login .login-container .flying-dragon {
   position: absolute;
-  bottom: 10rem;
+  bottom: 23rem;
   width: 20rem;
-  right: 40rem;
+  left: 42rem;
 }
 
 .login .login-container .login-info {
@@ -73,8 +73,9 @@
 
 .login .login-container .login-info p {
   padding-top: 2rem;
-  width: 10rem;
+  width: 20rem;
   text-align: justify;
+  color: white;
 }
 
 .login .login-container .login-form {
@@ -95,15 +96,18 @@
 
 .login .login-container .login-form h1 {
   padding-bottom: 1rem;
+  color: white;
 }
 
 .login .login-container .login-form p {
   padding-top: 1rem;
+  color: white;
 }
 
 .login .login-container .login-form input {
   margin-top: 1rem;
   padding: 0.4rem;
+  width: 100%;
 }
 
 .login .login-container .login-form button {

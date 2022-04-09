@@ -26,9 +26,9 @@
 
     .flying-dragon {
       position: absolute;
-      bottom: 10rem;
+      bottom: 23rem;
       width: 20rem;
-      right: 40rem;
+      left: 42rem;
     }
     .login-info {
       display: flex;
@@ -42,8 +42,9 @@
 
       p {
         padding-top: 2rem;
-        width: 10rem;
+        width: 20rem;
         text-align: justify;
+        color: white;
       }
     }
 
@@ -55,15 +56,18 @@
 
       h1 {
         padding-bottom: 1rem;
+        color: white;
       }
 
       p {
         padding-top: 1rem;
+        color: white;
       }
 
       input {
         margin-top: 1rem;
         padding: 0.4rem;
+        width: 100%;
       }
 
       button {
