@@ -1,4 +1,6 @@
 import AppRoutes from "./Routes/AppRoutes";
+import '../src/assets/css/index.css'
+import './index.css'
 
 function App() {
   return (
