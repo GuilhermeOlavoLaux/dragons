@@ -1,11 +1,13 @@
 import { Fragment, useEffect, useState } from "react";
-import BackgroundImage from "../ScreenBody/BackgroundImage";
 import Header from "../ScreenBody/Header"
 import axios from "axios";
 import DragonCard from "./DragonCard";
+import AddButton from "../utils/AddButton";
+import DragonViewModal from "../Modals/DragonViewModal";
 
 export default function DragonsList() {
     const [dragonsList, setDragonsList] = useState([])
+
 
     useEffect(() => {
         getDragonsList()
@@ -22,7 +24,11 @@ export default function DragonsList() {
         const dragonsCards = dragonsList.map((dragon) => {
             return (
                 <>
-                    <DragonCard dragonName={dragon.name}></DragonCard>
+                    <div onClick={() => {
+                    }} >
+
+                        <DragonCard dragon={dragon}></DragonCard>
+                    </div>
                 </>
             )
         })
@@ -36,12 +42,14 @@ export default function DragonsList() {
     return (
         <Fragment>
 
-            <BackgroundImage></BackgroundImage>
+          
             <Header></Header>
 
+            <div className="add-dragon-button-container">
+                <AddButton text='Cadastrar Novo Dragão'></AddButton>
+            </div>
 
             <div className="dragons-list-container">
-
                 {renderDragonsList()}
             </div>
 

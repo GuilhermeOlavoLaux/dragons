@@ -1,3 +1,9 @@
-*{
-    margin: 0px;
+* {
+  margin: 0px;
+}
+
+body {
+  background-image: url('https://media.discordapp.net/attachments/957014892500635669/962160334389518346/skye-background.png');
+  background-color: #cccccc;
+  position: relative;
 }

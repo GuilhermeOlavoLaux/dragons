@@ -195,23 +195,108 @@
   border-color: #8e8e93;
 }
 
-.background-container {
-  position: relative;
-}
-
-.background-container .background-image {
-  height: 100vh;
-  width: 100vw;
-  z-index: -1;
-  position: absolute;
-}
-
 .dragon-card {
-  background-color: #bbffbb;
+  background-color: #162632;
   border: 2px solid green;
   border-radius: 0.6rem;
-  color: #162632;
+  color: #bbffbb;
   padding: 1rem;
-  margin: 2rem 5rem;
+  margin: 2rem 20vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.dragon-card .dragon-card-buttons ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.dragon-card .dragon-card-buttons li {
+  cursor: pointer;
+  padding-right: 1rem;
+}
+
+.dragon-card .dragon-card-buttons li:nth-child(3) {
+  padding-right: 0rem;
+}
+
+.add-dragon-button-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  margin-right: 20vw;
+}
+
+.add-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.4rem;
+  border-radius: 0.6rem;
+  border: 1px solid transparent;
+  color: #162632;
+  background-color: #bbffbb;
+  -webkit-transition: all 0.15s linear;
+  transition: all 0.15s linear;
+  margin-top: 2rem;
+}
+
+.add-button:hover {
+  border-color: #bbffbb;
+  color: #bbffbb;
+  cursor: pointer;
+  background-color: transparent;
+  -webkit-transform: translateY(5px) scale(0.95);
+          transform: translateY(5px) scale(0.95);
+}
+
+.modal .modal-shadow {
+  background: rgba(0, 0, 0, 0.7);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0px;
+}
+
+.modal .modal-container {
+  width: 80vw;
+  height: 80vh;
+  background-color: #162632;
+  border-radius: 0.6rem;
+  position: fixed;
+  top: 10vh;
+  right: 10vw;
+}
+
+.modal .modal-container .close-button-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  margin: 1.6rem 1.6rem;
 }
 /*# sourceMappingURL=index.css.map */

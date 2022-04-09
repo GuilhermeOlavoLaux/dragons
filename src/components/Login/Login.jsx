@@ -1,7 +1,6 @@
 import { Fragment, useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../Context/AuthContext";
-import BackgroundImage from "../ScreenBody/BackgroundImage"
 
 export default function Login() {
     const [userName, setUserName] = useState('')
@@ -20,9 +19,6 @@ export default function Login() {
 
     return (
         <Fragment>
-
-            <BackgroundImage />
-
 
             <div className="login">
 

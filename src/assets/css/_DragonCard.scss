@@ -1,8 +1,27 @@
 .dragon-card {
-  background-color: #bbffbb;
+  background-color: #162632;
   border: 2px solid green;
   border-radius: 0.6rem;
-  color: #162632;
+  color: #bbffbb;
   padding: 1rem;
-  margin: 2rem 5rem;
+  margin: 2rem 20vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .dragon-card-buttons {
+    ul {
+      list-style: none;
+      display: flex;
+    }
+    li {
+      cursor: pointer;
+      padding-right: 1rem;
+    }
+
+    li:nth-child(3) {
+      padding-right: 0rem;
+    }
+  }
 }
