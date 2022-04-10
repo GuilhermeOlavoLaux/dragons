@@ -1,12 +1,12 @@
 import { Fragment, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Header from "../ScreenBody/Header"
 import axios from "axios";
 import DragonCard from "./DragonCard";
-import DragonViewModal from "../Modals/DragonViewModal";
 
 export default function DragonsList() {
     const [dragonsList, setDragonsList] = useState([])
-
+    const navigate = useNavigate()
 
     useEffect(() => {
         getDragonsList()
@@ -38,7 +38,7 @@ export default function DragonsList() {
             <Header></Header>
 
             <div className="add-dragon-button-container">
-                <button className="add-button">Cadastrar Novo Dragão</button>
+                <button className="add-button" onClick={() => navigate('/create')}>Cadastrar Novo Dragão</button>
             </div>
 
             <div className="dragons-list-container">

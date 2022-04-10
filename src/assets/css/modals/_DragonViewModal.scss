@@ -5,22 +5,34 @@
     height: 100vh;
     position: fixed;
     top: 0px;
-
   }
 
   .view-modal-container {
-    width: 80vw;
-    height: 80vh;
+    width: 60vw;
+    height: 60vh;
     background-color: #162632;
     border-radius: 0.6rem;
     position: fixed;
-    top: 10vh;
-    right: 10vw;
+    top: 20vh;
+    right: 20vw;
 
     .close-button-container {
       display: flex;
       justify-content: end;
       margin: 1.6rem 1.6rem;
     }
+  }
+  h1 {
+    text-align: center;
+    color: #bbffbb;
+    margin-bottom: 2rem;
+  }
+
+  .modal-edit-body {
+    height: 80%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
   }
 }

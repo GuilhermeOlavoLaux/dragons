@@ -5,17 +5,11 @@ import axios from "axios";
 
 export default function DragonEditModal({ show, setShow, dragon }) {
 
-
     const [fields, setFields] = useState(dragon)
 
-    console.log(fields)
-
-
-
     async function editDragon() {
-        const edit = await axios.put(`http://5c4b2a47aa8ee500142b4887.mockapi.io/api/v1/dragon/${dragon.id}`, fields)
+        await axios.put(`http://5c4b2a47aa8ee500142b4887.mockapi.io/api/v1/dragon/${dragon.id}`, fields)
     }
-
 
     return (
         <Fragment>
@@ -36,7 +30,7 @@ export default function DragonEditModal({ show, setShow, dragon }) {
                         </div>
                     </div>
 
-                    <div className="teste">
+                    <div className="modal-edit-body">
 
                         <h1>Editar dragão</h1>
                         <div className="dragon-edit-content">

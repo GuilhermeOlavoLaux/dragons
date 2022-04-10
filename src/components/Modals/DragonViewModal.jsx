@@ -4,6 +4,10 @@ import { faClose } from '@fortawesome/free-solid-svg-icons'
 
 export default function DragonViewModal({ show, setShow, dragon }) {
 
+    var date = new Date(dragon.createdAt);
+
+    const formatedDate = date.toISOString().substring(0, 10);
+
     return (
         <Fragment>
 
@@ -24,14 +28,16 @@ export default function DragonViewModal({ show, setShow, dragon }) {
                     </div>
 
 
-                    <h1>Nome: {dragon.name}</h1>
+                    <div className="modal-edit-body">
+                        <h1>Nome: {dragon.name}</h1>
 
-                    <h1>Tipo: {dragon.type}</h1>
+                        <h1>Tipo: {dragon.type}</h1>
 
-                    <h1>Criação: {dragon.createdAt}</h1>
+                        <h1>Criação: {formatedDate}</h1>
 
-                    <img src="https://media.discordapp.net/attachments/957014892500635669/962422251418963990/red-dragon.png" alt="" />
+                        <img src="https://media.discordapp.net/attachments/957014892500635669/962422251418963990/red-dragon.png" alt="" />
 
+                    </div>
                 </div>
             </div>
 

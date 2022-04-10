@@ -229,6 +229,19 @@
   padding-right: 0rem;
 }
 
+.add-drag-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .add-dragon-button-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -343,7 +356,7 @@
   margin-bottom: 2rem;
 }
 
-.edit-modal .teste {
+.edit-modal .modal-edit-body {
   height: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -360,7 +373,7 @@
           justify-content: center;
 }
 
-.edit-modal .teste .dragon-edit-content {
+.edit-modal .modal-edit-body .dragon-edit-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -373,15 +386,15 @@
           justify-content: space-between;
 }
 
-.edit-modal .teste .dragon-edit-content .dragon-info {
+.edit-modal .modal-edit-body .dragon-edit-content .dragon-info {
   text-align: center;
 }
 
-.edit-modal .teste .dragon-edit-content .dragon-info h2 {
+.edit-modal .modal-edit-body .dragon-edit-content .dragon-info h2 {
   color: #bbffbb;
 }
 
-.edit-modal .teste .dragon-edit-content .form-container {
+.edit-modal .modal-edit-body .dragon-edit-content .form-container {
   border: solid green 2px;
   border-radius: 6px;
   padding: 5rem;
@@ -389,24 +402,24 @@
   color: #bbffbb;
 }
 
-.edit-modal .teste .dragon-edit-content .form-container h3 {
+.edit-modal .modal-edit-body .dragon-edit-content .form-container h3 {
   width: 80px;
 }
 
-.edit-modal .teste .dragon-edit-content .form-container .name-container {
+.edit-modal .modal-edit-body .dragon-edit-content .form-container .name-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 2rem;
 }
 
-.edit-modal .teste .dragon-edit-content .form-container .type-container {
+.edit-modal .modal-edit-body .dragon-edit-content .form-container .type-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.edit-modal .teste .edit-modal-buttons {
+.edit-modal .modal-edit-body .edit-modal-buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -418,7 +431,7 @@
           justify-content: center;
 }
 
-.edit-modal .teste .edit-modal-buttons button {
+.edit-modal .modal-edit-body .edit-modal-buttons button {
   margin: 2rem;
 }
 
@@ -431,13 +444,13 @@
 }
 
 .view-modal .view-modal-container {
-  width: 80vw;
-  height: 80vh;
+  width: 60vw;
+  height: 60vh;
   background-color: #162632;
   border-radius: 0.6rem;
   position: fixed;
-  top: 10vh;
-  right: 10vw;
+  top: 20vh;
+  right: 20vw;
 }
 
 .view-modal .view-modal-container .close-button-container {
@@ -448,5 +461,28 @@
       -ms-flex-pack: end;
           justify-content: end;
   margin: 1.6rem 1.6rem;
+}
+
+.view-modal h1 {
+  text-align: center;
+  color: #bbffbb;
+  margin-bottom: 2rem;
+}
+
+.view-modal .modal-edit-body {
+  height: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 /*# sourceMappingURL=index.css.map */
