@@ -1,27 +1,79 @@
 .edit-modal {
-    .edit-modal-shadow {
-      background: rgba(0, 0, 0, 0.7);
-      width: 100vw;
-      height: 100vh;
-      position: fixed;
-      top: 0px;
-  
+  .edit-modal-shadow {
+    background: rgba(0, 0, 0, 0.7);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+  }
+
+  .edit-modal-container {
+    width: 60vw;
+    height: 60vh;
+    background-color: #162632;
+    border-radius: 0.6rem;
+    position: fixed;
+    top: 20vh;
+    right: 20vw;
+
+    .close-button-container {
+      display: flex;
+      justify-content: end;
+      margin: 1.6rem 1.6rem;
     }
-  
-    .edit-modal-container {
-      width: 80vw;
-      height: 80vh;
-      background-color: #162632;
-      border-radius: 0.6rem;
-      position: fixed;
-      top: 10vh;
-      right: 10vw;
-  
-      .close-button-container {
-        display: flex;
-        justify-content: end;
-        margin: 1.6rem 1.6rem;
+  }
+  h1 {
+    text-align: center;
+    color: #bbffbb;
+    margin-bottom: 2rem;
+  }
+
+  .teste {
+    height: 80%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    .dragon-edit-content {
+      display: flex;
+      align-items: center;
+      width: 80%;
+      justify-content: space-between;
+      .dragon-info {
+        text-align: center;
+
+        h2 {
+          color: #bbffbb;
+        }
+      }
+
+      .form-container {
+        border: solid green 2px;
+        border-radius: 6px;
+        padding: 5rem;
+        background-color: #1a2d2d;
+        color: #bbffbb;
+        h3 {
+          width: 80px;
+        }
+        .name-container {
+          display: flex;
+          margin-bottom: 2rem;
+        }
+
+        .type-container {
+          display: flex;
+        }
+      }
+    }
+    .edit-modal-buttons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      button {
+        margin: 2rem;
       }
     }
   }
-  
+}

@@ -2,7 +2,6 @@ import { Fragment, useEffect, useState } from "react";
 import Header from "../ScreenBody/Header"
 import axios from "axios";
 import DragonCard from "./DragonCard";
-import AddButton from "../utils/AddButton";
 import DragonViewModal from "../Modals/DragonViewModal";
 
 export default function DragonsList() {
@@ -39,7 +38,7 @@ export default function DragonsList() {
             <Header></Header>
 
             <div className="add-dragon-button-container">
-                <AddButton text='Cadastrar Novo Dragão'></AddButton>
+                <button className="add-button">Cadastrar Novo Dragão</button>
             </div>
 
             <div className="dragons-list-container">

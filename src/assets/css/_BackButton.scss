@@ -1,4 +1,4 @@
-.add-button {
+.back-button {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -7,16 +7,16 @@
   border-radius: 0.6rem;
   border: 1px solid transparent;
   color: #162632;
-  background-color: #bbffbb;
+  background-color: #e1372b;
   transition: all 0.15s linear;
   margin-top: 2rem;
   min-height: 2.2rem;
   min-width: 4rem;
 }
 
-.add-button:hover {
-  border-color: #bbffbb;
-  color: #bbffbb;
+.back-button:hover {
+  border-color: #e1372b;
+  color: #e1372b;
   cursor: pointer;
   background-color: transparent;
   transform: translateY(5px) scale(0.95);

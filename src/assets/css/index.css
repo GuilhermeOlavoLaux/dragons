@@ -261,11 +261,48 @@
   -webkit-transition: all 0.15s linear;
   transition: all 0.15s linear;
   margin-top: 2rem;
+  min-height: 2.2rem;
+  min-width: 4rem;
 }
 
 .add-button:hover {
   border-color: #bbffbb;
   color: #bbffbb;
+  cursor: pointer;
+  background-color: transparent;
+  -webkit-transform: translateY(5px) scale(0.95);
+          transform: translateY(5px) scale(0.95);
+}
+
+.back-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.4rem;
+  border-radius: 0.6rem;
+  border: 1px solid transparent;
+  color: #162632;
+  background-color: #e1372b;
+  -webkit-transition: all 0.15s linear;
+  transition: all 0.15s linear;
+  margin-top: 2rem;
+  min-height: 2.2rem;
+  min-width: 4rem;
+}
+
+.back-button:hover {
+  border-color: #e1372b;
+  color: #e1372b;
   cursor: pointer;
   background-color: transparent;
   -webkit-transform: translateY(5px) scale(0.95);
@@ -281,6 +318,119 @@
 }
 
 .edit-modal .edit-modal-container {
+  width: 60vw;
+  height: 60vh;
+  background-color: #162632;
+  border-radius: 0.6rem;
+  position: fixed;
+  top: 20vh;
+  right: 20vw;
+}
+
+.edit-modal .edit-modal-container .close-button-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  margin: 1.6rem 1.6rem;
+}
+
+.edit-modal h1 {
+  text-align: center;
+  color: #bbffbb;
+  margin-bottom: 2rem;
+}
+
+.edit-modal .teste {
+  height: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.edit-modal .teste .dragon-edit-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.edit-modal .teste .dragon-edit-content .dragon-info {
+  text-align: center;
+}
+
+.edit-modal .teste .dragon-edit-content .dragon-info h2 {
+  color: #bbffbb;
+}
+
+.edit-modal .teste .dragon-edit-content .form-container {
+  border: solid green 2px;
+  border-radius: 6px;
+  padding: 5rem;
+  background-color: #1a2d2d;
+  color: #bbffbb;
+}
+
+.edit-modal .teste .dragon-edit-content .form-container h3 {
+  width: 80px;
+}
+
+.edit-modal .teste .dragon-edit-content .form-container .name-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.edit-modal .teste .dragon-edit-content .form-container .type-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.edit-modal .teste .edit-modal-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.edit-modal .teste .edit-modal-buttons button {
+  margin: 2rem;
+}
+
+.view-modal .view-modal-shadow {
+  background: rgba(0, 0, 0, 0.7);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0px;
+}
+
+.view-modal .view-modal-container {
   width: 80vw;
   height: 80vh;
   background-color: #162632;
@@ -290,7 +440,7 @@
   right: 10vw;
 }
 
-.edit-modal .edit-modal-container .close-button-container {
+.view-modal .view-modal-container .close-button-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

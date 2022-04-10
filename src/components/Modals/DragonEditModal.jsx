@@ -1,17 +1,20 @@
 import { Fragment, useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faClose } from '@fortawesome/free-solid-svg-icons'
+import axios from "axios";
 
 export default function DragonEditModal({ show, setShow, dragon }) {
 
-    const initialDragon = {
-        name: dragon.name,
-        createdAt: dragon.createdAt,
-        type: dragon.type
+
+    const [fields, setFields] = useState(dragon)
+
+    console.log(fields)
+
+
+
+    async function editDragon() {
+        const edit = await axios.put(`http://5c4b2a47aa8ee500142b4887.mockapi.io/api/v1/dragon/${dragon.id}`, fields)
     }
-
-
-    const [fields, setFields] = useState(initialDragon)
 
 
     return (
@@ -33,36 +36,53 @@ export default function DragonEditModal({ show, setShow, dragon }) {
                         </div>
                     </div>
 
-                    <h1>Editar dragão</h1>
+                    <div className="teste">
 
-                    <div className="dragon-edit-content">
+                        <h1>Editar dragão</h1>
+                        <div className="dragon-edit-content">
 
-                        <div className="dragon-info">
+                            <div className="dragon-info">
 
-                            <img src="https://media.discordapp.net/attachments/957014892500635669/962422251418963990/red-dragon.png" alt="" />
+                                <img src="https://media.discordapp.net/attachments/957014892500635669/962422251418963990/red-dragon.png" alt="" />
 
-                            <h2>{dragon.name}</h2>
+                                <h2>{dragon.name}</h2>
+
+                            </div>
+                            <div className="form-container">
+
+                                <div className="name-container">
+                                    <h3>Nome: </h3>
+
+                                    <input type="text" value={fields.name} onChange={(e) => setFields({ ...fields, name: e.target.value })} />
+                                </div>
+
+
+                                <div className="type-container">
+                                    <h3>Tipo: </h3>
+
+                                    <input type="text" value={fields.type} onChange={(e) => setFields({ ...fields, type: e.target.value })} />
+                                </div>
+                            </div>
 
                         </div>
 
-                        <div className="name-container">
-                            <h2>Nome: </h2>
+                        <div className="edit-modal-buttons">
 
-                            <input type="text" value={fields.name} onChange={(e) => setFields({ ...fields, name: e.target.value })} />
+                            <button
+                                className='back-button'
+                                onClick={() => {
+                                    editDragon()
+                                    setShow(false)
+                                }} >Voltar</button>
+
+                            <button
+                                className='add-button'
+                                onClick={() => {
+                                    editDragon()
+                                    setShow(false)
+                                }}>Salvar</button>
                         </div>
-
-
-                        <div className="type-container">
-                            <h2>Tipo: </h2>
-
-                            <input type="text" value={fields.type} onChange={(e) => setFields({ ...fields, type: e.target.value })} />
-                        </div>
-
                     </div>
-
-
-                    <button>Sair</button>
-                    <button>Salvar</button>
                 </div>
             </div>
 
