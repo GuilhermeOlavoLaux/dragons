@@ -7,10 +7,10 @@ export default function DragonViewModal({ show, setShow, dragon }) {
     return (
         <Fragment>
 
-            <div className="modal" style={show ? { display: "initial" } : { display: "none" }}>
+            <div className="view-modal" style={show ? { display: "initial" } : { display: "none" }}>
 
-                <div className="modal-shadow" onClick={() => setShow(false)}></div>
-                <div className="modal-container">
+                <div className="view-modal-shadow" onClick={() => setShow(false)}></div>
+                <div className="view-modal-container">
                     <div className="close-button-container">
                         <div onClick={() => setShow(false)}>
                             <FontAwesomeIcon

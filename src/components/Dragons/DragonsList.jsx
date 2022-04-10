@@ -24,25 +24,18 @@ export default function DragonsList() {
         const dragonsCards = dragonsList.map((dragon) => {
             return (
                 <>
-                    <div onClick={() => {
-                    }} >
-
-                        <DragonCard dragon={dragon}></DragonCard>
-                    </div>
+                    <DragonCard dragon={dragon} />
                 </>
             )
         })
 
-        return dragonsCards
+        return dragonsCards.sort()
     }
 
-
-
-    console.log(dragonsList)
     return (
         <Fragment>
 
-          
+
             <Header></Header>
 
             <div className="add-dragon-button-container">

@@ -272,7 +272,7 @@
           transform: translateY(5px) scale(0.95);
 }
 
-.modal .modal-shadow {
+.edit-modal .edit-modal-shadow {
   background: rgba(0, 0, 0, 0.7);
   width: 100vw;
   height: 100vh;
@@ -280,7 +280,7 @@
   top: 0px;
 }
 
-.modal .modal-container {
+.edit-modal .edit-modal-container {
   width: 80vw;
   height: 80vh;
   background-color: #162632;
@@ -290,7 +290,35 @@
   right: 10vw;
 }
 
-.modal .modal-container .close-button-container {
+.edit-modal .edit-modal-container .close-button-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  margin: 1.6rem 1.6rem;
+}
+
+.view-modal .view-modal-shadow {
+  background: rgba(0, 0, 0, 0.7);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0px;
+}
+
+.view-modal .view-modal-container {
+  width: 80vw;
+  height: 80vh;
+  background-color: #162632;
+  border-radius: 0.6rem;
+  position: fixed;
+  top: 10vh;
+  right: 10vw;
+}
+
+.view-modal .view-modal-container .close-button-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

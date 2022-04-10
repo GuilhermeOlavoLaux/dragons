@@ -1,8 +1,11 @@
-import { Fragment } from 'react'
+import { Fragment, useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { AuthContext } from "../Context/AuthContext";
+
 
 export default function Header() {
     const navigate = useNavigate()
+    const { authenticated, setAuthenticated } = useContext(AuthContext)
 
     return (
         <Fragment>
@@ -15,9 +18,13 @@ export default function Header() {
                         <h1>Sicredi Dragons</h1>
                     </div>
                     <ul>
-                        <li onClick={() => navigate('/')}>Inicio</li>
+                        <li onClick={() => navigate('/dragons')}>Inicio</li>
 
-                        <li onClick={() => navigate('/')}>Sair</li>
+                        <li onClick={() => {
+                            navigate('/')
+                            setAuthenticated(false)
+                        }}>
+                            Sair</li>
                     </ul>
                 </div>
             </div>

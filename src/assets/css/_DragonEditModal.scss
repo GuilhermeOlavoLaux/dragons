@@ -1,0 +1,27 @@
+.edit-modal {
+    .edit-modal-shadow {
+      background: rgba(0, 0, 0, 0.7);
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      top: 0px;
+  
+    }
+  
+    .edit-modal-container {
+      width: 80vw;
+      height: 80vh;
+      background-color: #162632;
+      border-radius: 0.6rem;
+      position: fixed;
+      top: 10vh;
+      right: 10vw;
+  
+      .close-button-container {
+        display: flex;
+        justify-content: end;
+        margin: 1.6rem 1.6rem;
+      }
+    }
+  }
+  
