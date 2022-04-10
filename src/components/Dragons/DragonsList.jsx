@@ -10,7 +10,6 @@ export default function DragonsList() {
 
     useEffect(() => {
         getDragonsList()
-
     }, [])
 
     async function getDragonsList() {
@@ -34,7 +33,6 @@ export default function DragonsList() {
     return (
         <Fragment>
 
-
             <Header></Header>
 
             <div className="add-dragon-button-container">
@@ -44,10 +42,6 @@ export default function DragonsList() {
             <div className="dragons-list-container">
                 {renderDragonsList()}
             </div>
-
-
-
-
 
         </Fragment>
     )

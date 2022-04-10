@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEdit, faEye, faTrash } from '@fortawesome/free-solid-svg-icons'
 import DragonViewModal from "../Modals/DragonViewModal";
 import DragonEditModal from "../Modals/DragonEditModal";
+import axios from "axios";
 
 export default function DragonCard({ dragon }) {
 
@@ -11,6 +12,11 @@ export default function DragonCard({ dragon }) {
 
     const [dragonToEdit, setDragonToEdit] = useState()
     const [dragonEditModal, setDragonEditModal] = useState(false)
+
+
+    async function deleteDragon(){
+        await axios.delete(`http://5c4b2a47aa8ee500142b4887.mockapi.io/api/v1/dragon/${dragon.id}`)
+    }
 
     return (
         <Fragment>
@@ -61,6 +67,7 @@ export default function DragonCard({ dragon }) {
                                 size='lg'
                                 color="red"
                                 className='icon'
+                                onClick={() =>  deleteDragon()}
                             ></FontAwesomeIcon>
                         </li>
                     </ul>

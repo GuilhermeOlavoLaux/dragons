@@ -1,6 +1,45 @@
-.add-drag-container{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.add-drag-container {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    height: 40%;
+  }
+
+  .add-dragon-form {
+    border: solid green 2px;
+    border-radius: 6px;
+    padding: 5rem;
+    background-color: #1a2d2d;
+    color: #bbffbb;
+
+    h1 {
+      width: 8rem;
+    }
+    .name-container {
+      display: flex;
+    }
+
+    .type-container {
+      margin-top: 2rem;
+      display: flex;
+    }
+    .add-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+
+    .add-container {
+      button {
+        margin-right: 1rem;
+        margin-left: 1rem;
+
+      }
+    }
+  }
 }
