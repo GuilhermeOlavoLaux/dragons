@@ -1,10 +1,9 @@
-@import './_Header.scss';
+@import './bodyComponent/_Header.scss';
 @import './_Login.scss';
-@import './_BackgroundImage.scss';
 @import './_DragonCard.scss';
 @import './_DragonsList.scss';
-@import './_AddButton.scss';
-@import './_BackButton.scss';
-@import './_DragonEditModal.scss';
-@import './_DragonViewModal.scss';
-@import './DefaultInput.scss';
+@import './utils/_AddButton.scss';
+@import './utils/_BackButton.scss';
+@import './modals/_DragonEditModal.scss';
+@import './modals/_DragonViewModal.scss';
+@import './utils/_DefaultInput.scss';
