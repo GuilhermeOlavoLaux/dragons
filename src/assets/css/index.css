@@ -329,16 +329,20 @@
           justify-content: center;
 }
 
-.add-drag-container img {
-  height: 40%;
-}
-
 .add-drag-container .add-dragon-form {
   border: solid green 2px;
   border-radius: 6px;
   padding: 5rem;
   background-color: #1a2d2d;
   color: #bbffbb;
+  position: relative;
+}
+
+.add-drag-container .add-dragon-form img {
+  position: absolute;
+  height: 40%;
+  top: 0rem;
+  left: 26rem;
 }
 
 .add-drag-container .add-dragon-form h1 {
@@ -374,6 +378,46 @@
 .add-drag-container .add-dragon-form .add-container button {
   margin-right: 1rem;
   margin-left: 1rem;
+}
+
+@media (max-width: 720px) {
+  .add-drag-container .add-dragon-form {
+    padding: 3rem;
+  }
+  .add-drag-container .add-dragon-form img {
+    display: none;
+  }
+}
+
+@media (max-width: 430px) {
+  .add-drag-container .add-dragon-form .name-container {
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .add-drag-container .add-dragon-form .name-container h1 {
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+  .add-drag-container .add-dragon-form .type-container {
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .add-drag-container .add-dragon-form .type-container h1 {
+    margin-bottom: 1rem;
+    width: 100%;
+  }
 }
 
 .add-dragon-button-container {

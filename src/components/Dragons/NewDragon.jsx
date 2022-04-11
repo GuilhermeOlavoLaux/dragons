@@ -39,11 +39,12 @@ export default function NewDragon() {
 
             <Header />
             <div className="add-drag-container">
-                <img
-                    src="https://media.discordapp.net/attachments/957014892500635669/962826033013325944/blue-dragon.png"
-                    alt="" />
+
 
                 <div className="add-dragon-form">
+                    <img
+                        src="https://media.discordapp.net/attachments/957014892500635669/962826033013325944/blue-dragon.png"
+                        alt="" />
                     <div className="name-container">
                         <h1>Nome: </h1>
                         <input

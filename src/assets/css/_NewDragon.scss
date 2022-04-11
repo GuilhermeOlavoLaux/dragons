@@ -5,17 +5,19 @@
   align-items: center;
   justify-content: center;
 
-  img {
-    height: 40%;
-  }
-
   .add-dragon-form {
     border: solid green 2px;
     border-radius: 6px;
     padding: 5rem;
     background-color: #1a2d2d;
     color: #bbffbb;
-
+    position: relative;
+    img {
+      position: absolute;
+      height: 40%;
+      top: 0rem;
+      left: 26rem;
+    }
     h1 {
       width: 8rem;
     }
@@ -32,13 +34,47 @@
       align-items: center;
       justify-content: center;
       margin-top: 2rem;
-    }
 
-    .add-container {
       button {
         margin-right: 1rem;
         margin-left: 1rem;
+      }
+    }
+  }
+}
 
+@media (max-width: 720px) {
+  .add-drag-container {
+    .add-dragon-form {
+      padding: 3rem;
+      img {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 430px) {
+  .add-drag-container {
+    .add-dragon-form {
+      .name-container {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        h1 {
+          margin-bottom: 1rem;
+          width: 100%;
+        }
+      }
+
+      .type-container {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        h1 {
+          margin-bottom: 1rem;
+          width: 100%;
+        }
       }
     }
   }
