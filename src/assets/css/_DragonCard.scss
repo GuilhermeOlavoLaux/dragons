@@ -10,6 +10,13 @@
   align-items: center;
   justify-content: space-between;
 
+  h1 {
+    max-width: 50%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
   .dragon-card-buttons {
     ul {
       list-style: none;
@@ -23,5 +30,16 @@
     li:nth-child(3) {
       padding-right: 0rem;
     }
+  }
+}
+
+@media (max-width: 680px) {
+  .dragon-card {
+    margin: 2rem 10vw;
+
+    h1 {
+      font-size: 1.6rem;
+    }
+  
   }
 }

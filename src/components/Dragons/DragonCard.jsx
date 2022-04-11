@@ -21,7 +21,7 @@ export default function DragonCard({ dragon }) {
         window.alert(`${dragon.name} deletado.`)
     }
 
-    const { getDragonsList} = useContext(DragonsContext)
+    const { getDragonsList } = useContext(DragonsContext)
 
 
     return (
@@ -38,6 +38,8 @@ export default function DragonCard({ dragon }) {
 
 
             <div className="dragon-card">
+
+
                 <h1>{dragon.name}</h1>
 
                 <div className="dragon-card-buttons">
@@ -77,7 +79,7 @@ export default function DragonCard({ dragon }) {
                                     deleteDragon()
                                     getDragonsList()
                                     getDragonsList()
-                                 
+
 
                                 }}
                             ></FontAwesomeIcon>

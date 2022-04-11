@@ -2,5 +2,12 @@
     display: flex;
     justify-content: end;
     margin-right: 20vw;
+}
+
+
+@media (max-width: 680px) {
+    .add-dragon-button-container{
+        margin-right: 10vw;
+    }
 
 }
