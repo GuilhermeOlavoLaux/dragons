@@ -39,23 +39,37 @@ export default function NewDragon() {
 
             <Header />
             <div className="add-drag-container">
-                <img src="https://media.discordapp.net/attachments/957014892500635669/962826033013325944/blue-dragon.png" alt="" />
+                <img
+                    src="https://media.discordapp.net/attachments/957014892500635669/962826033013325944/blue-dragon.png"
+                    alt="" />
 
                 <div className="add-dragon-form">
                     <div className="name-container">
                         <h1>Nome: </h1>
-                        <input type="text" onChange={(e) => { setName(e.target.value) }} />
+                        <input
+                            type="text"
+                            onChange={(e) => { setName(e.target.value) }} />
                     </div>
 
                     <div className="type-container">
                         <h1>Tipo: </h1>
-                        <input type="text" onChange={(e) => { setType(e.target.value) }} />
+                        <input
+                            type="text"
+                            onChange={(e) => { setType(e.target.value) }} />
 
                     </div>
                     <div className="add-container">
-                        <button className="back-button" onClick={() => navigate('/dragons')}>Voltar</button>
+                        <button
+                            className="back-button"
+                            onClick={() => navigate('/dragons')
+                            }
+                        >Voltar</button>
 
-                        <button className="add-button" onClick={() => saveNewDragon()}>Salvar</button>
+                        <button
+                            className="add-button"
+                            onClick={() => saveNewDragon()
+                            }
+                        >Salvar</button>
                     </div>
                 </div>
             </div>

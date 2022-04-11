@@ -9,8 +9,10 @@ function DragonsProvider({ children }) {
     const [dragonsList, setDragonsList] = useState([])
 
     async function getDragonsList() {
+        console.log('sadsdasda')
         const { data } = await axios.get("http://5c4b2a47aa8ee500142b4887.mockapi.io/api/v1/dragon")
         setDragonsList(data)
+        console.log(data)
     }
 
 

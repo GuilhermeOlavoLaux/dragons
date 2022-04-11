@@ -1,9 +1,10 @@
-import { Fragment, useState } from "react";
+import { Fragment, useContext, useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEdit, faEye, faTrash } from '@fortawesome/free-solid-svg-icons'
 import DragonViewModal from "../Modals/DragonViewModal";
 import DragonEditModal from "../Modals/DragonEditModal";
 import axios from "axios";
+import { DragonsContext } from "../Context/DragonsContext";
 
 export default function DragonCard({ dragon }) {
 
@@ -19,6 +20,9 @@ export default function DragonCard({ dragon }) {
         await axios.delete(`http://5c4b2a47aa8ee500142b4887.mockapi.io/api/v1/dragon/${dragon.id}`)
         window.alert(`${dragon.name} deletado.`)
     }
+
+    const { getDragonsList} = useContext(DragonsContext)
+
 
     return (
         <Fragment>
@@ -69,7 +73,13 @@ export default function DragonCard({ dragon }) {
                                 size='lg'
                                 color="red"
                                 className='icon'
-                                onClick={() => deleteDragon()}
+                                onClick={() => {
+                                    deleteDragon()
+                                    getDragonsList()
+                                    getDragonsList()
+                                 
+
+                                }}
                             ></FontAwesomeIcon>
                         </li>
                     </ul>

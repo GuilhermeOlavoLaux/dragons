@@ -35,7 +35,9 @@ export default function DragonViewModal({ show, setShow, dragon }) {
 
                         <h1>Criação: {formatedDate}</h1>
 
-                        <img src="https://media.discordapp.net/attachments/957014892500635669/962422251418963990/red-dragon.png" alt="" />
+                        <img
+                            src="https://media.discordapp.net/attachments/957014892500635669/962422251418963990/red-dragon.png"
+                            alt="" />
 
                     </div>
                 </div>

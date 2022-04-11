@@ -5,7 +5,7 @@ import { AuthContext } from "../Context/AuthContext";
 
 export default function Header() {
     const navigate = useNavigate()
-    const { authenticated, setAuthenticated } = useContext(AuthContext)
+    const { setAuthenticated } = useContext(AuthContext)
 
     return (
         <Fragment>
@@ -14,7 +14,9 @@ export default function Header() {
 
                     <div className="logo-container">
 
-                        <img src="https://media.discordapp.net/attachments/957014892500635669/962377039434887238/kindpng_570205.png" alt="" />
+                        <img
+                            src="https://media.discordapp.net/attachments/957014892500635669/962377039434887238/kindpng_570205.png"
+                            alt="" />
                         <h1>Dragons</h1>
                     </div>
                     <ul>

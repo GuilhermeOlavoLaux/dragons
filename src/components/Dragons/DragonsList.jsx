@@ -1,4 +1,4 @@
-import { Fragment, useContext, useEffect, useState } from "react";
+import { Fragment, useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Header from "../ScreenBody/Header"
 import axios from "axios";
@@ -38,8 +38,7 @@ export default function DragonsList() {
                     className="add-button"
                     onClick={() => {
                         navigate('/create')
-                    }
-                    }
+                    }}
                 >Cadastrar Novo Dragão</button>
             </div>
 
