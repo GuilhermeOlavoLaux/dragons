@@ -14,8 +14,10 @@ export default function DragonCard({ dragon }) {
     const [dragonEditModal, setDragonEditModal] = useState(false)
 
 
-    async function deleteDragon(){
+    async function deleteDragon() {
+
         await axios.delete(`http://5c4b2a47aa8ee500142b4887.mockapi.io/api/v1/dragon/${dragon.id}`)
+        window.alert(`${dragon.name} deletado.`)
     }
 
     return (
@@ -67,7 +69,7 @@ export default function DragonCard({ dragon }) {
                                 size='lg'
                                 color="red"
                                 className='icon'
-                                onClick={() =>  deleteDragon()}
+                                onClick={() => deleteDragon()}
                             ></FontAwesomeIcon>
                         </li>
                     </ul>

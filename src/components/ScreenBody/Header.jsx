@@ -15,7 +15,7 @@ export default function Header() {
                     <div className="logo-container">
 
                         <img src="https://media.discordapp.net/attachments/957014892500635669/962377039434887238/kindpng_570205.png" alt="" />
-                        <h1>Sicredi Dragons</h1>
+                        <h1>Dragons</h1>
                     </div>
                     <ul>
                         <li onClick={() => navigate('/dragons')}>Inicio</li>

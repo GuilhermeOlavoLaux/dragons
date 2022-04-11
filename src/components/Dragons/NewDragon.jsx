@@ -6,8 +6,8 @@ import Header from '../ScreenBody/Header'
 export default function NewDragon() {
     const navigate = useNavigate()
 
-    const [name, setName] = useState()
-    const [type, setType] = useState()
+    const [name, setName] = useState('')
+    const [type, setType] = useState('')
 
     const date = new Date()
 
@@ -16,25 +16,21 @@ export default function NewDragon() {
         type: type,
         createdAt: date
     }
-    console.log(name)
-    console.log(type)
-
-
     async function saveNewDragon() {
 
-        if (name && type !== undefined) {
-            window.alert("Para salvar um dragão informe um nome e um tipo.")
+        if (dragonToSave.name === '') {
+            window.alert("Informe um nome para o seu dragão")
+            return
+
+        }
+        if (dragonToSave.type === '') {
+            window.alert("Informe um tipo para o seu dragão")
             return
         }
-        try {
-            await axios.post(`http://5c4b2a47aa8ee500142b4887.mockapi.io/api/v1/dragon`, dragonToSave)
 
-            window.alert(`${dragonToSave.name} foi salvo com sucesso`)
+        await axios.post(`http://5c4b2a47aa8ee500142b4887.mockapi.io/api/v1/dragon`, dragonToSave)
+        window.alert(`${dragonToSave.name} foi salvo com sucesso`)
 
-        } catch (e) {
-            window.alert("Aconteceu algum erro, tente novamente")
-
-        }
     }
 
 

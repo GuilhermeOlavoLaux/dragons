@@ -1,21 +1,19 @@
-import { Fragment, useEffect, useState } from "react";
+import { Fragment, useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Header from "../ScreenBody/Header"
 import axios from "axios";
 import DragonCard from "./DragonCard";
+import { DragonsContext } from "../Context/DragonsContext";
 
 export default function DragonsList() {
-    const [dragonsList, setDragonsList] = useState([])
     const navigate = useNavigate()
+
+    const { getDragonsList, dragonsList } = useContext(DragonsContext)
 
     useEffect(() => {
         getDragonsList()
     }, [])
 
-    async function getDragonsList() {
-        const { data } = await axios.get("http://5c4b2a47aa8ee500142b4887.mockapi.io/api/v1/dragon")
-        setDragonsList(data)
-    }
 
 
     function renderDragonsList() {
@@ -36,7 +34,13 @@ export default function DragonsList() {
             <Header></Header>
 
             <div className="add-dragon-button-container">
-                <button className="add-button" onClick={() => navigate('/create')}>Cadastrar Novo Dragão</button>
+                <button
+                    className="add-button"
+                    onClick={() => {
+                        navigate('/create')
+                    }
+                    }
+                >Cadastrar Novo Dragão</button>
             </div>
 
             <div className="dragons-list-container">
