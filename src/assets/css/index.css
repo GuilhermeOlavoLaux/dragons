@@ -42,10 +42,27 @@
   display: flex;
   list-style: none;
   color: #bbffbb;
+  font-size: 1.2rem;
 }
 
 .header .header-container li:first-child {
   padding-right: 1rem;
+}
+
+@media (max-width: 950px) {
+  .header .header-container .logo-container img {
+    height: 4rem;
+    padding: 1rem 0rem;
+  }
+}
+
+@media (max-width: 495px) {
+  .header .header-container .logo-container img {
+    height: 3rem;
+  }
+  .header .header-container .logo-container h1 {
+    display: none;
+  }
 }
 
 .login {
@@ -65,6 +82,7 @@
 .login .login-container {
   background-color: #162632;
   border: 2px solid green;
+  border-radius: 6px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -103,7 +121,7 @@
 }
 
 .login .login-container .login-info img {
-  width: 15rem;
+  width: 11rem;
 }
 
 .login .login-container .login-info p {
@@ -193,6 +211,58 @@
   background-color: rgba(255, 255, 255, 0.16);
   color: #8e8e93;
   border-color: #8e8e93;
+}
+
+@media (max-width: 1200px) {
+  .login .login-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .login .login-container .flying-dragon {
+    position: absolute;
+    bottom: 27rem;
+    width: 19rem;
+    left: 80%;
+  }
+  .login .login-container .login-info {
+    padding-right: 0rem;
+    margin-top: 2rem;
+  }
+  .login .login-container .login-info img {
+    width: 8rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .login .login-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .login .login-container .flying-dragon {
+    display: none;
+    bottom: 27rem;
+    width: 19rem;
+    left: 80%;
+  }
+  .login .login-container .login-info {
+    padding-right: 0rem;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .login .login-container {
+    height: 100vh;
+    width: 100vw;
+    padding: 0rem;
+  }
+  .login .login-container .login-info p {
+    width: 90%;
+  }
 }
 
 .dragon-card {
