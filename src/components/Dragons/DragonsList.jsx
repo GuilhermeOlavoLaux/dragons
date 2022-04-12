@@ -16,7 +16,7 @@ export default function DragonsList() {
         const dragonsCards = dragonsList.map((dragon) => {
             return (
                 <>
-                    <DragonCard dragon={dragon} />
+                    <DragonCard key={dragon} dragon={dragon} />
                 </>
             )
         })
