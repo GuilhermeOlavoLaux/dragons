@@ -29,11 +29,22 @@ export default function DragonViewModal({ show, setShow, dragon }) {
 
 
                     <div className="modal-edit-body">
-                        <h1>Nome: {dragon.name}</h1>
 
-                        <h1>Tipo: {dragon.type}</h1>
+                        <div className="name-container">
+                            <h1>Nome: </h1>
+                            <h3>{dragon.name}</h3>
+                        </div>
 
-                        <h1>Criação: {formatedDate}</h1>
+                        <div className="type-container">
+                            <h1>Tipo: </h1>
+                            <h3>{dragon.type}</h3>
+                        </div>
+
+
+                        <div className="date-container">
+                            <h1>Data: </h1>
+                            <h3>{formatedDate}</h3>
+                        </div>
 
                         <img
                             src="https://media.discordapp.net/attachments/957014892500635669/962422251418963990/red-dragon.png"

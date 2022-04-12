@@ -6,6 +6,7 @@ import { AuthContext } from "../Context/AuthContext";
 export default function Header() {
     const navigate = useNavigate()
     const { setAuthenticated } = useContext(AuthContext)
+    const { doLogout } = useContext(AuthContext)
 
     return (
         <Fragment>
@@ -23,8 +24,8 @@ export default function Header() {
                         <li onClick={() => navigate('/dragons')}>Inicio</li>
 
                         <li onClick={() => {
+                            doLogout()
                             navigate('/')
-                            setAuthenticated(false)
                         }}>
                             Sair</li>
                     </ul>

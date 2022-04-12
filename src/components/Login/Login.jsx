@@ -6,13 +6,13 @@ export default function Login() {
     const [userName, setUserName] = useState('')
     const [password, setPassword] = useState('')
 
-    const { setAuthenticated } = useContext(AuthContext)
+    const { doLogin } = useContext(AuthContext)
 
     const navigate = useNavigate()
 
     function validateUser() {
         if (userName === "Teste" && password === "123") {
-            setAuthenticated(true)
+            doLogin()
         }
         navigate('/dragons')
     }
