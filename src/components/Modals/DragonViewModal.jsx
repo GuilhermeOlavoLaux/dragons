@@ -1,6 +1,7 @@
-import { Fragment, useState } from "react";
+import { Fragment } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faClose } from '@fortawesome/free-solid-svg-icons'
+import RedDragon from "../../assets/images/red-dragon.png"
 
 export default function DragonViewModal({ show, setShow, dragon }) {
 
@@ -10,9 +11,7 @@ export default function DragonViewModal({ show, setShow, dragon }) {
 
     return (
         <Fragment>
-
             <div className="view-modal" style={show ? { display: "initial" } : { display: "none" }}>
-
                 <div className="view-modal-shadow" onClick={() => setShow(false)}></div>
                 <div className="view-modal-container">
                     <div className="close-button-container">
@@ -26,34 +25,25 @@ export default function DragonViewModal({ show, setShow, dragon }) {
                             ></FontAwesomeIcon>
                         </div>
                     </div>
-
-
                     <div className="modal-edit-body">
-
                         <div className="name-container">
                             <h1>Nome: </h1>
                             <h3>{dragon.name}</h3>
                         </div>
-
                         <div className="type-container">
                             <h1>Tipo: </h1>
                             <h3>{dragon.type}</h3>
                         </div>
-
-
                         <div className="date-container">
                             <h1>Data: </h1>
                             <h3>{formatedDate}</h3>
                         </div>
-
                         <img
-                            src="https://media.discordapp.net/attachments/957014892500635669/962422251418963990/red-dragon.png"
-                            alt="" />
-
+                            src={RedDragon}
+                            alt="red-dragon" />
                     </div>
                 </div>
             </div>
-
         </Fragment>
     )
 }

@@ -13,7 +13,6 @@ export default function AppRoutes() {
             <Route element={<ProtectedRoutes />}>
                 <Route exact path='/dragons' element={<DragonsList />} />
                 <Route exact path='/create' element={<NewDragon />} />
-
             </Route>
         </Routes>
     )

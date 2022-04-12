@@ -1,20 +1,16 @@
 import { Fragment, useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Header from "../ScreenBody/Header"
-import axios from "axios";
 import DragonCard from "./DragonCard";
 import { DragonsContext } from "../Context/DragonsContext";
 
 export default function DragonsList() {
     const navigate = useNavigate()
-
     const { getDragonsList, dragonsList } = useContext(DragonsContext)
 
     useEffect(() => {
         getDragonsList()
     }, [])
-
-
 
     function renderDragonsList() {
         const dragonsCards = dragonsList.map((dragon) => {
@@ -30,7 +26,6 @@ export default function DragonsList() {
 
     return (
         <Fragment>
-
             <Header></Header>
 
             <div className="add-dragon-button-container">

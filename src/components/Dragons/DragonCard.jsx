@@ -10,7 +10,6 @@ export default function DragonCard({ dragon }) {
 
     const [dragonToView, setDragonToView] = useState()
     const [dragonViewModal, setDragonViewModal] = useState(false)
-
     const [dragonToEdit, setDragonToEdit] = useState()
     const [dragonEditModal, setDragonEditModal] = useState(false)
 
@@ -22,7 +21,6 @@ export default function DragonCard({ dragon }) {
     }
 
     const { getDragonsList } = useContext(DragonsContext)
-
 
     return (
         <Fragment>
@@ -36,15 +34,10 @@ export default function DragonCard({ dragon }) {
                     <DragonEditModal show={dragonEditModal} setShow={setDragonEditModal} dragon={dragonToEdit}></DragonEditModal> : ""
             }
 
-
             <div className="dragon-card">
-
-
                 <h1>{dragon.name}</h1>
-
                 <div className="dragon-card-buttons">
                     <ul>
-
                         <li>
                             <FontAwesomeIcon
                                 icon={faEye}
@@ -79,8 +72,6 @@ export default function DragonCard({ dragon }) {
                                     deleteDragon()
                                     getDragonsList()
                                     getDragonsList()
-
-
                                 }}
                             ></FontAwesomeIcon>
                         </li>

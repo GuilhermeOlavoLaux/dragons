@@ -5,7 +5,6 @@ const DragonsContext = createContext();
 
 function DragonsProvider({ children }) {
 
-
     const [dragonsList, setDragonsList] = useState([])
 
     async function getDragonsList() {
