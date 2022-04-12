@@ -11,8 +11,19 @@ export default function DragonsList() {
     useEffect(() => {
         getDragonsList()
     }, [])
-
+    
     function renderDragonsList() {
+
+        dragonsList.sort(function (dragon, nextDragon) {
+            if (dragon.name > nextDragon.name) {
+                return 1;
+            }
+            if (dragon.name < nextDragon.name) {
+                return -1;
+            }
+            return 0;
+        })
+
         const dragonsCards = dragonsList.map((dragon) => {
             return (
                 <>
