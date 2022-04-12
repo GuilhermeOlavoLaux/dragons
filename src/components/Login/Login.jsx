@@ -1,6 +1,9 @@
 import { Fragment, useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../Context/AuthContext";
+import WariorRed from "../../assets/images/warior-8bit.png"
+import RedDragon from "../../assets/images/red-dragon-8bit.png"
+
 
 export default function Login() {
     const [userName, setUserName] = useState('')
@@ -21,10 +24,10 @@ export default function Login() {
                 <div className="login-container">
                     <img
                         className="flying-dragon"
-                        src="https://media.discordapp.net/attachments/957014892500635669/962165788888924200/red-dragon-8bit.png"
-                        alt="" />
+                        src={RedDragon}
+                        alt="red-dragon" />
                     <div className="login-info">
-                        <img src="https://media.discordapp.net/attachments/957014892500635669/962193228629684305/warior-8bit.png?width=432&height=473" alt="" />
+                        <img src={WariorRed} alt="red-warior" />
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, esse? Eligendi reprehenderit magni cupiditate sed quasi qui aut sit, nam doloribus omnis veniam amet accusamus sequi excepturi repudiandae iusto quidem?</p>
                     </div>
                     <div className="login-form">
