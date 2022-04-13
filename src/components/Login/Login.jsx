@@ -13,6 +13,8 @@ export default function Login() {
     function validateUser() {
         if (userName === "Teste" && password === "123") {
             doLogin()
+        } else{
+            window.alert("Utilize o usuário: Teste com a senha: 123")
         }
         navigate('/dragons')
     }
