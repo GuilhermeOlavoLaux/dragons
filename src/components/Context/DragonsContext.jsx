@@ -12,7 +12,6 @@ function DragonsProvider({ children }) {
         setDragonsList(data)
     }
 
-
     return (
         <DragonsContext.Provider value={{ getDragonsList, dragonsList, setDragonsList }}>
             {children}

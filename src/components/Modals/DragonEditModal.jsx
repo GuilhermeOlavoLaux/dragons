@@ -6,7 +6,6 @@ import { DragonsContext } from "../Context/DragonsContext";
 import RedDragon from "../../assets/images/red-dragon.png" 
 
 export default function DragonEditModal({ show, setShow, dragon }) {
-
     const [fields, setFields] = useState(dragon)
     const { getDragonsList } = useContext(DragonsContext)
 

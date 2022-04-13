@@ -4,9 +4,7 @@ import { faClose } from '@fortawesome/free-solid-svg-icons'
 import RedDragon from "../../assets/images/red-dragon.png"
 
 export default function DragonViewModal({ show, setShow, dragon }) {
-
     var date = new Date(dragon.createdAt);
-
     const formatedDate = date.toISOString().substring(0, 10);
 
     return (

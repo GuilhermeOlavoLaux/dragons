@@ -4,7 +4,6 @@ import { AuthContext } from "../Context/AuthContext";
 import WariorRed from "../../assets/images/warior-8bit.png"
 import RedDragon from "../../assets/images/red-dragon-8bit.png"
 
-
 export default function Login() {
     const [userName, setUserName] = useState('')
     const [password, setPassword] = useState('')

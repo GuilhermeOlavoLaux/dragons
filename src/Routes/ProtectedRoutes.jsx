@@ -9,7 +9,6 @@ const ProtectedRoutes = () => {
   if (authenticated === null) {
     return null
   }
-
   
   return (
     authenticated ? (

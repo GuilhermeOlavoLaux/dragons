@@ -4,11 +4,9 @@ import { useNavigate } from "react-router-dom";
 import Header from '../ScreenBody/Header'
 import blueDragon from "../../assets/images/blue-dragon.png"
 export default function NewDragon() {
-    const navigate = useNavigate()
-
     const [name, setName] = useState('')
     const [type, setType] = useState('')
-
+    const navigate = useNavigate()
     const date = new Date()
 
     const dragonToSave = {
@@ -16,6 +14,7 @@ export default function NewDragon() {
         type: type,
         createdAt: date
     }
+    
     async function saveNewDragon() {
 
         if (dragonToSave.name === '') {

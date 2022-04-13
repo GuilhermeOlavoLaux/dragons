@@ -7,20 +7,16 @@ import axios from "axios";
 import { DragonsContext } from "../Context/DragonsContext";
 
 export default function DragonCard({ dragon }) {
-
     const [dragonToView, setDragonToView] = useState()
     const [dragonViewModal, setDragonViewModal] = useState(false)
     const [dragonToEdit, setDragonToEdit] = useState()
     const [dragonEditModal, setDragonEditModal] = useState(false)
-
+    const { getDragonsList } = useContext(DragonsContext)
 
     async function deleteDragon() {
-
         await axios.delete(`http://5c4b2a47aa8ee500142b4887.mockapi.io/api/v1/dragon/${dragon.id}`)
         window.alert(`${dragon.name} deletado.`)
     }
-
-    const { getDragonsList } = useContext(DragonsContext)
 
     return (
         <Fragment>
@@ -80,6 +76,4 @@ export default function DragonCard({ dragon }) {
             </div>
         </Fragment>
     )
-
-
 }

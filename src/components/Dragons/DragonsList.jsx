@@ -15,10 +15,10 @@ export default function DragonsList() {
     function renderDragonsList() {
 
         dragonsList.sort(function (dragon, nextDragon) {
-            if (dragon.name > nextDragon.name) {
+            if (dragon.name.toLowerCase() > nextDragon.name.toLowerCase()) {
                 return 1;
             }
-            if (dragon.name < nextDragon.name) {
+            if (dragon.name.toLowerCase() < nextDragon.name.toLowerCase()) {
                 return -1;
             }
             return 0;
@@ -31,12 +31,12 @@ export default function DragonsList() {
                 </>
             )
         })
-
         return dragonsCards
     }
 
     return (
         <Fragment>
+
             <Header></Header>
 
             <div className="add-dragon-button-container">

@@ -4,6 +4,15 @@ const AuthContext = createContext()
 
 function AuthProvider({ children }) {
     const [authenticated, setAuthenticated] = useState(null)
+    
+    useEffect(() => {
+        const isLogged = JSON.parse(localStorage.getItem('authenticated'))
+        if (isLogged) {
+            setAuthenticated(true)
+        } else {
+            setAuthenticated(false)
+        }
+    }, [])
 
     function doLogin() {
         localStorage.setItem('authenticated', true)
@@ -15,14 +24,6 @@ function AuthProvider({ children }) {
         setAuthenticated(false)
     }
 
-    useEffect(() => {
-        const isLogged = JSON.parse(localStorage.getItem('authenticated'))
-        if (isLogged) {
-            setAuthenticated(true)
-        } else {
-            setAuthenticated(false)
-        }
-    }, [])
 
     return (
         <AuthContext.Provider
